@@ -33,11 +33,13 @@ The starting trivia base is Better Farm sanctuary animals.
     • Move on to next question (button)
 
 ### Silver
+    • Modal Introduction
     • Multiple Question Sets (user chooses topic)
     • Timer
     • Tiers of difficult
 
 ### Gold
+    • Answer randomization (location placement)
     • Residual Scoreboard (survives refresh, user competition)
     • Lifeline options (50/50, Ask the audience, Phone-a-friend)
     -- Phone-a-friend and Ask the audience will need to be modified to fit this game format (perhaps using the social media pages?)
@@ -50,5 +52,4 @@ The starting trivia base is Better Farm sanctuary animals.
 
 ## Project Log
 - Idea formation issues around envisioned project type versus desired functionality. Envisioned a trivia game in the style of a flash card game - which derailed project development start a bit. Revisited KISS concepts to walk back conceptual ideas to the MVP and building out Bronze/Silver/Gold deployments.
-
 
