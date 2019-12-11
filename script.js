@@ -62,12 +62,18 @@ const startGame = document.querySelector("#start");
 const nextQuestion = document.querySelector("#next");
 let questionBox = document.querySelector(".question");
 let answersBox = document.querySelector(".answers");
+let currentQuestion = questions[randomQuestion()];
+
+function randomQuestion() {
+    return Math.floor(Math.random() * questions.length)
+};
 
 
-let randomQuestion = Math.floor(Math.random() * questions.length)
-let currentQuestion = questions[randomQuestion];
+// let randomQuestion = Math.floor(Math.random() * questions.length)
+
 
 startGame.addEventListener("click", populateQuery());
+
 
 function populateQuery() {
     let question = currentQuestion.question
@@ -81,23 +87,27 @@ function populateQuery() {
         possAnswer.textContent = el
         possAnswer.className = "answer-pool"
         console.log(possAnswer)
+        possAnswer.addEventListener("click", evt => {
+            checkAnswer(evt.target, currentQuestion.correct)
+        })
         answersBox.appendChild(possAnswer)
     })
 };
 
-// populateQuery();
+function checkAnswer(userSelect, correctAnswer) {
+    if (userSelect.innerHTML == correctAnswer) {
+    console.log(userSelect.innerHTML)
+    console.log(correctAnswer)
+        alert("Congrats!")
+    } else {
+        alert("Sorry, you're wrong...")
+    }
+};
 
-// function populateAnswers() {
-//     for (var i = 0; i < Array.length; i += 1) {
+//// Check Answer Function
+// Compare user selection (div) to correct answer key:value pair
 
-//     }
-// };
 
-// function checkAnswer() {
-//     if () {
-
-//     }
-// };
 
 // nextQuestion.addEventListener("click", () => {
 
