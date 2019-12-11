@@ -34,8 +34,8 @@ body {
     grid-gap: 10px;
 }
 
-.answer-box {
-    background-color: grey;
+.answers {
+    background-color: lightseagreen;
     border-color: black;
     border-radius: 10px;
     width: 450px;
@@ -44,19 +44,20 @@ body {
     margin: 10px auto;
     display: grid;
     grid-gap: 5px;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(4, 1fr);
 }
 
-.answers {
-    background-color: lightblue;
+.answer-pool {
+    background-color: lightgreen;
     border-color: black;
     border-radius: 10px;
-    width: 50px;
-    height: 00px;
+    width: 400px;
+    height: 10px;
     padding: 10px;
     margin: 10px auto;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
+    grid-template: repeat(4, 1fr)
 }
 
 /* Buttons */

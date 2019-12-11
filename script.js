@@ -17,47 +17,93 @@
 // Create answer check - use boolean logic to check answer
 // Next question functionality
 
-// Array of the Starter Question Pack
+
+// Array of Starter Q/A Objects
 const questions = [
-    "How many horses live at Better Farm?",
-    "How many pigs live at Better Farm?",
-    "How many chickens live at Better Farm?",
-    "How many alpacas live at Better Farm?",
-    "How many dogs live at Better Farm?",
-    "How many bee hives host bees at Better Farm?",
-    "How many humans regularly live at Better Farm?"
+    {
+       question: "How many horses live at Better Farm?",
+       correct: 2, 
+       answerPool: [0, 2, 4, 5]
+    },
+    {
+        question: "How many pigs live at Better Farm?",
+        correct: 3, 
+        answerPool: [2, 3, 4, 5]
+     },
+     {
+        question: "How many chickens live at Better Farm?",
+        correct: 25, 
+        answerPool: [2, 13, 25, 42]
+     },
+     {
+        question: "How many alpacas live at Better Farm?",
+        correct: 8, 
+        answerPool: [4, 6, 8, 12]
+     },
+     {
+        question: "How many dogs live at Better Farm?",
+        correct: 3, 
+        answerPool: [0, 2, 3, 4]
+     },
+     {
+        question: "How many bee hives host bees at Better Farm?",
+        correct: 1, 
+        answerPool: [0, 1, 3, 5]
+     },
+     {
+        question: "How many humans regularly live at Better Farm?",
+        correct: 2, 
+        answerPool: [2, 3, 4, 5]
+     },
 ]
-
-// Array of the the Starter Question Pack Correct Answers
-const correctAnswers = [
-    2, 
-    3,
-    25,
-    8,
-    3,
-    1,
-    2
-]
-
-// let incorrectAnswer = ;
-
-let currentQuestion = document.querySelectorAll(questions[i]);
-let correctAnswer = document.querySelectorAll(correctAnswers[i]);
-// let incorrectAnswers = 
-
-// STILL NEED: var to create an incorrect answer set of random numbers
-// Math.floor(Math.random() * 101);    <- This will generate the integer, not sure how to implement
-
-// STILL NEED: functionality to add correct answers to running score
 
 // Start game button to initialize trivia game board.
 const startGame = document.querySelector("#start");
+const nextQuestion = document.querySelector("#next");
+let questionBox = document.querySelector(".question");
+let answersBox = document.querySelector(".answers");
 
-startGame.addEventListener("click", () => {
 
-});
+let randomQuestion = Math.floor(Math.random() * questions.length)
+let currentQuestion = questions[randomQuestion];
 
-function createQuiz() {
-    for (var i = 0; i < Array.length; i +=)
-    
-}
+startGame.addEventListener("click", populateQuery());
+
+function populateQuery() {
+    let question = currentQuestion.question
+    console.log(question)
+    questionBox.textContent = question
+    let answers = currentQuestion.answerPool
+    console.log(answers)
+    answers.forEach((el) => {
+        console.log(el)
+        let possAnswer = document.createElement("div")
+        possAnswer.textContent = el
+        possAnswer.className = "answer-pool"
+        console.log(possAnswer)
+        answersBox.appendChild(possAnswer)
+    })
+};
+
+// populateQuery();
+
+// function populateAnswers() {
+//     for (var i = 0; i < Array.length; i += 1) {
+
+//     }
+// };
+
+// function checkAnswer() {
+//     if () {
+
+//     }
+// };
+
+// nextQuestion.addEventListener("click", () => {
+
+// });
+
+// STILL NEED: functionality to add correct answers to running score
+// Event Listener for correct answer 'click'
+//// include alert for correct answer
+//// tally score to score div (not yet created)
