@@ -1,3 +1,15 @@
+header {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Trivia Game Box */
+
 .trivia-game {
     background-color: green;
     border-color: grey;
@@ -47,11 +59,23 @@
     grid-gap: 10px;
 }
 
+/* Buttons */
+
+#start {
+    display: block;
+    margin: 10px auto;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
 #next {
     display: block;
     margin: 10px auto;
     text-transform: uppercase;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     text-align: center;
     cursor: pointer;

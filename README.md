@@ -34,6 +34,7 @@ The starting trivia base is Better Farm sanctuary animals.
 
 ### Silver
     • Modal Introduction
+    • Add Dev Social Links (page bottom)
     • Multiple Question Sets (user chooses topic)
     • Timer
     • Tiers of difficult
