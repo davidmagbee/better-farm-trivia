@@ -3,6 +3,17 @@ header {
     text-align: center;
 }
 
+h4 {
+    background-color: turquoise;
+    border-color: black;
+    border-radius: 10px;
+    width: 100px;
+    height: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-gap: 10px;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -23,8 +34,8 @@ body {
 }
 
 .question {
-    background-color: grey;
-    border-color: black;
+    background-color: #265480;
+    border-color: #133353;
     border-radius: 10px;
     width: 450px;
     height: 200px;
@@ -35,8 +46,8 @@ body {
 }
 
 .answers {
-    background-color: lightseagreen;
-    border-color: black;
+    background-color: #218957;
+    border-color: #4A9470;
     border-radius: 10px;
     width: 450px;
     height: 200px;
@@ -48,8 +59,8 @@ body {
 }
 
 .answer-pool {
-    background-color: lightgreen;
-    border-color: black;
+    background-color: #c5882F;
+    border-color: #d4A96A;
     border-radius: 10px;
     width: 400px;
     height: 10px;
@@ -57,7 +68,7 @@ body {
     margin: 10px auto;
     display: grid;
     grid-gap: 5px;
-    grid-template: repeat(4, 1fr)
+    /* grid-template: repeat(4, 1fr) */
 }
 
 /* Buttons */

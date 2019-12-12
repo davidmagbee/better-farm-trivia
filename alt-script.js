@@ -62,59 +62,73 @@ const startGame = document.querySelector("#start");
 const nextQuestion = document.querySelector("#next");
 let questionBox = document.querySelector(".question");
 let answersBox = document.querySelector(".answers");
-// let currentQuestion = questions[randomQuestion()];
-// let currentQuestion = questions[0];
-let questionCount = 0;
-let score = document.querySelector("#score-tally")
-let currentScore = 0
-let x = 0
+let currentQuestion = questions[randomQuestion()];
+let score = document.querySelector(".score")
 
-// function randomQuestion() {
-//     return Math.floor(Math.random() * questions.length)
-// };
+// // Question Carousel Variables
+// let currentQuestionIndex = 0;
+// let previousQuestionIndex = 0;
 
-// startGame.addEventListener("click", evt => {
-//     populateQuery()
-// });
+function randomQuestion() {
+    return Math.floor(Math.random() * questions.length)
+};
 
-nextQuestion.addEventListener("click", populateQuery);
+startGame.addEventListener("click", evt => {
+    populateQuery()
+});
 
 function populateQuery() {
+    let question = currentQuestion.question
+    console.log(question)
+    questionBox.textContent = question
+    let answers = currentQuestion.answerPool
+    console.log(answers)
+    answers.forEach((el) => {
+        console.log(el)
+        let possAnswer = document.createElement("div")
+        possAnswer.textContent = el
+        possAnswer.className = "answer-pool"
+        console.log(possAnswer)
+        possAnswer.addEventListener("click", evt => {
+            checkAnswer(evt.target, currentQuestion.correct)
+        })
+        answersBox.appendChild(possAnswer)
+    })
+};
+
+//// Check Answer Function
+// Compare user selection (div) to correct answer key:value pair
+
+function checkAnswer(userSelect, correctAnswer) {
+    if (userSelect.innerHTML == correctAnswer) {
+    console.log(userSelect.innerHTML)
+    console.log(correctAnswer)
+        alert("Congrats!")
+
+    } else {
+        alert("Sorry, you're wrong...")
+    }
+};
+
+nextQuestion.addEventListener("click", refreshPage);
+
+function refreshPage(){
+    if(confirm("Are you ready to play again?")){
+        location.reload();
+    }
+}
+
+// Score Page Function
+
+function scorePage () {
+    if (x = 7) {
+        questionBox.textContent = "The game is over."
     while (answersBox.firstChild) {
         answersBox.removeChild(answersBox.firstChild)
     }
-    if (x >= 7) {
-        questionBox.textContent = "The game is over."
         let finalScore = document.createElement("div")
         finalScore.classList.add("final-score")
         finalScore.textContent = "Your final score " + currentScore + " of 7."
         answersBox.appendChild(finalScore)
-    } else {
-        questionBox.textContent = questions[x].question
-    for (i = 0; i < questions[x].answerPool.length; i++) {
-        let possAnswer = document.createElement("div")
-        possAnswer.classList.add("answer-pool")
-        possAnswer.textContent = questions[x].answerPool[i]
-        answersBox.appendChild(possAnswer)
-    }    
-        x += 1
-}
-};
-
-// Event Listener for user answer selection
-answersBox.addEventListener("click", evt => {
-    checkAnswer(evt.target, questions[x - 1].correct)
-}) 
-
-//// Check Answer Function
-// Compare user selection (div) to correct answer key:value pair
-function checkAnswer(userSelect, correctAnswer) {
-    if (userSelect.innerHTML == correctAnswer) {
-        alert("Congrats!")
-        currentScore += 1
-        score.innerHTML = "Score: " + currentScore
-    } else {
-        alert("Sorry, you're wrong...")
     }
-    populateQuery()
-};
+}
