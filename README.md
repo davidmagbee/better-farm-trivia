@@ -53,4 +53,4 @@ The starting trivia base is Better Farm sanctuary animals.
 
 ## Project Log
 - Idea formation issues around envisioned project type versus desired functionality. Envisioned a trivia game in the style of a flash card game - which derailed project development start a bit. Revisited KISS concepts to walk back conceptual ideas to the MVP and building out Bronze/Silver/Gold deployments.
-
+- MVP / Adjusted functionality to loop through questions instead of randomizing questions. Questions populate starting with first array item, and after the array has been iterated, an event listener populates a score page. Still needs a great deal of adjustment for css and some code cleanup and button cleanup. Also created an alt-script file to store removed code and alternate functionality for future iterations of this game project.
