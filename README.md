@@ -1,5 +1,6 @@
 # Project Link
 Project 1 GitHub Repo Url: https://github.com/macuser413/better-farm-trivia
+Trivia Game Url: https://macuser413.github.io/better-farm-trivia/
 
 ## Description
 General Assembly SEIR-1118 Unit 1 Project: Build a game with HTML, CSS, and JavaScript.
