@@ -1,5 +1,7 @@
 # Project Link
 Project 1 GitHub Repo Url: https://github.com/macuser413/better-farm-trivia
+
+# Game Link
 Trivia Game Url: https://macuser413.github.io/better-farm-trivia/
 
 ## Description
