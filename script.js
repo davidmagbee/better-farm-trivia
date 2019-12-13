@@ -1,22 +1,4 @@
-//// Initial conceptual process...
-// Develop Questions
-// Create question array const
-// Use OOP to create an Object with key:value pairs for Qs/As
-// Create class for Question (question, choices, answer)
-// Create class for actual trivia question quiz
-
-// MVP process
-// Create questions (3-5) - use array - DONE
-// Create answers (=) - use array - DONE
-// Create Next question button - DONE
-// Populate Qs/As using DOM manipulation - DONE
-// INTRO MODAL WINDOW???
-// POPULATE trivia game - DONE
-//// Questions and Answers divs created into game box (DOM) - DONE
-// Create event listeners for answer check and response - DONE
-// Create answer check - use boolean logic to check answer - DONE
-// Next question functionality - DONE... sort of
-
+// Better Farm Trivia Script
 
 // Array of Starter Q/A Objects
 const questions = [
@@ -55,39 +37,44 @@ const questions = [
         correct: 2, 
         answerPool: [2, 3, 4, 5]
      },
+     {
+        question: "How many barns are on Better Farm?",
+        correct: 3, 
+        answerPool: [1, 3, 4, 5]
+     },
+     {
+        question: "How many cabins are on Better Farm?",
+        correct: 2, 
+        answerPool: [0, 2, 3, 5]
+     },
+     {
+        question: "How many buildings are on Better Farm?",
+        correct: 9, 
+        answerPool: [5, 7, 9, 11]
+     },
 ]
 
 // Start game button to initialize trivia game board.
-const startGame = document.querySelector("#start");
-const nextQuestion = document.querySelector("#next");
+const resetGame = document.querySelector("#reset");
+// const nextQuestion = document.querySelector("#next");
 let questionBox = document.querySelector(".question");
 let answersBox = document.querySelector(".answers");
-// let currentQuestion = questions[randomQuestion()];
-// let currentQuestion = questions[0];
 let questionCount = 0;
 let score = document.querySelector("#score-tally")
 let currentScore = 0
 let x = 0
 
-// function randomQuestion() {
-//     return Math.floor(Math.random() * questions.length)
-// };
-
-// startGame.addEventListener("click", evt => {
-//     populateQuery()
-// });
-
-nextQuestion.addEventListener("click", populateQuery);
+populateQuery();
 
 function populateQuery() {
     while (answersBox.firstChild) {
         answersBox.removeChild(answersBox.firstChild)
     }
-    if (x >= 7) {
+    if (x >= 10) {
         questionBox.textContent = "The game is over."
         let finalScore = document.createElement("div")
         finalScore.classList.add("final-score")
-        finalScore.textContent = "Your final score " + currentScore + " of 7."
+        finalScore.textContent = "Your final score is " + currentScore + " out of 10."
         answersBox.appendChild(finalScore)
     } else {
         questionBox.textContent = questions[x].question
@@ -112,9 +99,19 @@ function checkAnswer(userSelect, correctAnswer) {
     if (userSelect.innerHTML == correctAnswer) {
         alert("Congrats!")
         currentScore += 1
-        score.innerHTML = "Score: " + currentScore
+        score.innerHTML = "Score: " + currentScore + "/10"
     } else {
         alert("Sorry, you're wrong...")
     }
     populateQuery()
 };
+
+resetGame.addEventListener("click", refreshPage);
+
+function refreshPage(){
+    if(confirm("Are you ready to play again?")){
+        location.reload();
+    }
+}
+
+// nextQuestion.addEventListener("click", populateQuery);

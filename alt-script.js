@@ -17,6 +17,18 @@
 // Create answer check - use boolean logic to check answer - DONE
 // Next question functionality - DONE... sort of
 
+//// CODE SNIPPETS - Pulled from previous functionality, and not in use
+// let currentQuestion = questions[randomQuestion()];
+// let currentQuestion = questions[0];
+
+// function randomQuestion() {
+//     return Math.floor(Math.random() * questions.length)
+// };
+
+// startGame.addEventListener("click", evt => {
+//     populateQuery()
+// });
+
 
 // Array of Starter Q/A Objects
 const questions = [

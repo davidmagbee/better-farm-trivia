@@ -3,27 +3,31 @@ header {
     text-align: center;
 }
 
+h1 {
+    color: #01371D;
+}
+
 h4 {
-    background-color: turquoise;
-    border-color: black;
+    background-color: #c5562f;
+    border-color: #c5562f;
     border-radius: 10px;
     width: 100px;
     height: 10px;
     padding: 10px;
-    margin: 10px auto;
+    margin: auto;
     display: grid;
     grid-gap: 10px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background: #728CA6;
 }
 
 /* Trivia Game Box */
 
 .trivia-game {
-    background-color: green;
-    border-color: grey;
+    background-color: #01371D;
     border-radius: 10px;
     width: 500px;
     height: 500px;
@@ -36,50 +40,73 @@ body {
 .question {
     background-color: #265480;
     border-color: #133353;
+    color: #ffdcaa;
+    text-align: center;
+    font-size: 40px;
     border-radius: 10px;
     width: 450px;
     height: 200px;
     padding: 10px;
     margin: 10px auto;
     display: grid;
-    grid-gap: 10px;
 }
 
 .answers {
-    background-color: #218957;
-    border-color: #4A9470;
+    background-color: #0F5935;
     border-radius: 10px;
     width: 450px;
     height: 200px;
     padding: 10px;
-    margin: 10px auto;
+    margin: auto;
     display: grid;
     grid-gap: 5px;
-    grid-template: repeat(4, 1fr);
 }
 
 .answer-pool {
-    background-color: #c5882F;
-    border-color: #d4A96A;
-    border-radius: 10px;
+    background-color: #c5882f;
+    color: #051c33;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
     width: 400px;
     height: 10px;
     padding: 10px;
-    margin: 10px auto;
+    margin: auto;
     display: grid;
     grid-gap: 5px;
-    /* grid-template: repeat(4, 1fr) */
 }
+
+.answer-pool:hover {
+    background-color: #265480;
+    color: #FFDCAA
+}
+
+/* .final-score {
+    background-color: #265480;
+    border-color: #133353;
+    color: #ffdcaa;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+    display: grid;
+} */
 
 /* Buttons */
 
-#start {
+#reset {
+    background-color: #c5562f;
+    border-color: #c5562f;
     display: block;
     margin: 10px auto;
     text-transform: uppercase;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
+    color: #051c33;
     cursor: pointer;
 }
 
