@@ -97,11 +97,11 @@ answersBox.addEventListener("click", evt => {
 // Compare user selection (div) to correct answer key:value pair
 function checkAnswer(userSelect, correctAnswer) {
     if (userSelect.innerHTML == correctAnswer) {
-        alert("Congrats!")
+        alert("Awesome, you answered correctly!")
         currentScore += 1
         score.innerHTML = "Score: " + currentScore + "/10"
     } else {
-        alert("Sorry, you're wrong...")
+        alert("Bummer, that is incorrect.")
     }
     populateQuery()
 };
