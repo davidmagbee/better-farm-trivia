@@ -99,7 +99,7 @@ function checkAnswer(userSelect, correctAnswer) {
     if (userSelect.innerHTML == correctAnswer) {
         alert("Awesome, you answered correctly!")
         currentScore += 1
-        score.innerHTML = "Score: " + currentScore + "/10"
+        score.innerHTML = "Score: " + currentScore + " / 10"
     } else {
         alert("Bummer, that is incorrect.")
     }

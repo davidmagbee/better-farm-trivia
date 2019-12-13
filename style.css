@@ -24,6 +24,11 @@ body {
     background: #728CA6;
 }
 
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffdcaa;
+    text-align: center;
+}
 /* Trivia Game Box */
 
 .trivia-game {
