@@ -2,7 +2,7 @@
 Project 1 GitHub Repo Url: https://github.com/davidmagbee/better-farm-trivia
 
 # Game Link
-Trivia Game Url: https://davidmaghbee.github.io/better-farm-trivia/
+Trivia Game Url: https://davidmagbee.github.io/better-farm-trivia/
 
 ## Description
 General Assembly SEIR-1118 Unit 1 Project: Build a game with HTML, CSS, and JavaScript.
